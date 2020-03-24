@@ -1,0 +1,648 @@
+/*基礎css*/
+/*
+    RWD1024_up.css
+        1024up
+        1024px~1366px 橫式 iPad Pro in landscape
+        1024px~1366px 直式 iPad Pro in portrait
+    RWD768_up.css
+        991px down
+        768px~1024px 直式 iPad in portrait
+        768px~1024px 橫式 iPad in landscape
+    RWD767_down.css
+        480~768
+        320~480  通用 ========================= 手機
+        320down  通用 ========================= 小型手機
+    RWD_special.css
+        直式-
+            320px~568px iPhone 5 & 5S portrait直式
+            375px~667px iPhone 6 portrait直式
+        橫式- 320~812
+            320px~480px iPhone 4 landscape橫式
+            320px~568px iPhone 5 & 5S landscape橫式
+            375px~667px iPhone 6 landscape橫式
+            375px~812px iphone X 橫式
+            414px~736px *iPhone 6 plus landscape橫式
+*/
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body.nslls{
+    font-family: 'Microsoft JhengHei', 'Noto Sans TC', 'Open Sans';
+    font-size: 100%;
+    letter-spacing:1.8px;
+    line-height: 1.50;
+    color: #222222;
+    background-color: #e8e8e8;
+}
+.nslls .flex{
+    display: flex;
+    justify-content: center;
+}
+.nslls .between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nslls .center{
+    text-align: center;
+}
+.nslls .Shadow{
+    box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.4);
+}
+.nslls ul,.nslls li{
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.nslls p{
+    margin-bottom: 0;
+}
+
+/*header*/
+.nslls .header{
+    color:#ffffff;
+    background-color: #a3c2d9;
+}
+.nslls .header .patient{
+    padding: 6px 15px;
+    background-color: #004085;
+}
+.nslls .header .doctor_all{
+    color:#000;
+}
+.nslls .header .doctor_all img{
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+    margin: 5px 15px;
+}
+.nslls .usefulTips_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12%;
+    height: 1.8em;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    background: #24C6DC;
+    background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);
+    background: linear-gradient(to right, #514A9D, #24C6DC);
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 1px 1px 3px 1px #868686;
+}
+.nslls .usefulTips_img img {
+    cursor: pointer;
+    margin: 0 5px;
+    width: 1em;
+    height: auto;
+    object-fit: contain;
+}
+.doctor_detail,.nurse_detail{
+    padding: 5px;
+}
+.nslls .header .container{
+    display: flex;
+}
+.nslls .subtitle{
+    background-color: #b2b2b2;
+}
+.nslls .logout{
+    height: 30px;
+    display: inline-block;
+}
+.date{
+    margin-right: 10px;
+}
+.time{
+    margin-left: 10px;
+}
+
+/*nav_icon*/
+.nslls .header #nav-icon{
+    position: relative;
+    z-index:1;
+    width: 30px;
+    height: 20px;
+    margin: 0 10px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+.nslls .header #nav-icon span {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    background: #ffffff;
+    border-radius: 2px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+.nslls .header #nav-icon span:nth-child(1){
+    top:0px;
+}
+.nslls .header #nav-icon span:nth-child(2){
+    top:10px;
+}
+.nslls .header #nav-icon span:nth-child(3){
+    top:20px;
+}
+.nslls .header #nav-icon.open span:nth-child(1) {
+    top: 10px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+.nslls .header #nav-icon.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.nslls .header #nav-icon.open span:nth-child(3) {
+    top: 10px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+/*hamburger-menu*/
+.nslls #hamburger-menu{
+    position: fixed;
+    left: 0px;
+    top: -100vh;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.5);
+    padding-top: 80px;
+    transition: .3s ease-in-out;
+}
+.nslls #hamburger-menu.active{
+    position: fixed;
+    left: 0px;
+    top: 0vh;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.5);
+    padding-top: 80px;
+}
+
+/*main*/
+.nslls .main_content{
+    height: calc(100vh - 380px);
+    margin: 20px auto;
+}
+.main{
+    width: 75%;
+    margin: 0 auto;
+}
+
+/*footer*/
+.nslls .footer .btn_wrap{
+    display: flex;
+    flex-wrap: wrap
+}
+.nslls .footer .btn_all{
+    display: block;
+    position: relative;
+    width: 16%;
+    height: 100px;
+    background-image: linear-gradient(-20deg, #0075a9 0%, #a3c2d9 100%);
+    margin: 0.33%;
+}
+.nslls .footer .btn_all img{
+    position: absolute;
+    left: 50%;
+    top: 14px;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+.nslls .footer .btn_all span{
+    position: absolute;
+    left: 50%;
+    top: 68px;
+    transform: translateX(-50%);
+    color: #ffffff;
+    z-index: 1;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+/*page*/
+.page .main{
+    margin: 20px auto;
+}
+.page .main{
+    width: 95%;
+    margin: 0px auto;
+}
+.page .main .table_title{
+    position: relative;
+    padding-left: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    background: #fff;
+    width: 350px;
+}
+.page .main .table-responsive{
+    width: 100%;
+    height: calc(100vh - 70px);
+}
+.page .main .table_title::before{
+    content:"";
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 9px;
+    height: 1.5em;
+    background: #004085;
+}
+.page .main .slick-item{
+    width: 95%;
+    margin: 0 auto;
+}
+.page .main .table_detail{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+    padding: 0px 5px;
+}
+.page .main  .table_detail .left{
+    width: 50px;
+}
+.page .main  .table_detail .right{
+    width: 100%;
+    background-color: #a3c2d9;
+    padding:15px;
+    border-radius: 10px;
+}
+.page .main .table_detail .list_number{
+    position: relative;
+    margin: 5px auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #004085;
+}
+.page .main .table_detail .list_number span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:#ffffff;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.page .main .table_detail .table_th_all {
+    width: 100%;
+}
+.page .main .table_detail .table_th_all .table_t{
+    white-space: nowrap;
+    text-align: center;
+    background-color: #a3c2d9;
+    color: #000;
+    padding:8px 15px;
+    font-weight: bold;
+    width: 32%;
+    margin:0% 0.6%;
+}
+.page .main .table_detail .table_td_all {
+    width: 100%;
+}
+
+.page .main .table_detail .table_td_all .table_t{
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 0px 15px;
+    padding: 6px 15px\9;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    width: 32%;
+    margin:0% 0.6%;
+}
+.page .main .table_detail .table_td_all .table_control{
+    justify-content: center;
+}
+.page .main .btn{
+    background-color: #004085;
+    -webkit-transition: all ease .3s;
+    transition: all ease .3s;
+    color: #ffffff;
+    margin: 0px 3px;
+    padding: 2px 12px;
+    font-size: 0.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page .main .btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.2);
+    color:#ffffff;
+}
+.page .main .date span{
+    margin-left: 10px;
+}
+.page .main .table_detail .width_half{
+    width: 50%;
+}
+/*表格寬度*/
+.page .main .table_detail .table_th_all  .l_table{
+    width: 50%;
+}
+.page .main .table_detail .table_th_all  .m_table{
+    width: 15%;
+}
+.page .main .table_detail .table_th_all  .r_table{
+    width: 35%;
+}
+.page .main .table_detail .table_td_all  .l_table{
+    width: 50%;
+}
+.page .main .table_detail .table_td_all  .m_table{
+    width: 15%;
+}
+.page .main .table_detail .table_td_all  .r_table{
+    width: 35%;
+}
+
+/*calendar 醫療行事曆*/
+.calendar .t_left{
+    width: 20%;
+}
+.calendar .t_right{
+    width: 20%;
+}
+
+/*hospitalization 住院須知*/
+.hospitalization .t_right{
+    width: 30%;
+}
+.hospitalization .t_mid{
+    width: 10%;
+}
+/*info 衛教資訊*/
+.info .main .table_detail .table_td_all .t_left,.info .main .table_detail .table_th_all .t_left{
+    width: 50%;
+}
+.info .main .table_detail .table_td_all .t_mid,.info .main .table_detail .table_th_all .t_mid{
+    width: 30%;
+}
+.info .main .table_detail .table_td_all .t_right,.info .main .table_detail .table_th_all .t_right{
+    width: 20%;
+}
+
+/*page team 醫療團隊*/
+.team .main .team_table_detail{
+    background-color: #a3c2d9;
+    border-radius: 8px;
+    padding: 15px;
+    width: 49%;
+}
+
+.team .main .team_table_detail .left .t_left{
+    width: 150px;
+    margin-right: 10px;
+    color: #000;
+    font-weight: bold;
+}
+.team .main .team_table_detail .left .t_left .table_th{
+    margin: 10px 0px;
+    padding: 3px 15px;
+}
+.team .main .team_table_detail .right {
+    width: 100%;
+    padding: 0px 15px;
+}
+.team .main .team_table_detail .right .top{
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    padding: 3px 15px;
+    margin: 5px 0px;
+}
+
+.team .main .team_table_detail .right .down .table_td{
+    margin: 10px 0px;
+    padding: 3px 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+
+.team .main .team_table_detail .left .t_right{
+    width: calc(100% - 130px);
+    display: flex;
+    flex-direction: column;
+}
+
+.team .main .team_table_detail .left .t_right .table_td{
+    display: block;
+    margin: 5px 0px;
+    padding: 3px 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    color: #007bff;;
+}
+.team .modal-dialog{
+    min-width: 90%;
+}
+.team .modal iframe{
+    min-height: 75vh;
+}
+
+/*questionnaire 滿意度調查*/
+.questionnaire .score{
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+}
+.questionnaire .score fieldset{
+    box-shadow: 0 1px 8px 2px rgba(0,0,0,0.2);
+    padding: 5px 15px;
+    margin: 15px 15px 30px 15px;
+    border-radius: 8px;
+    border: 1px solid #eeeeee;
+}
+.questionnaire .score fieldset legend{
+    background-color: #004085;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #ffffff;
+}
+.questionnaire .score .checkbox input{
+    margin-left: 10px;
+}
+.questionnaire .score .group{
+    padding: 6px 15px;
+    border-bottom: 1px solid #b4b4b4;
+    margin-bottom: 10px;
+}
+
+
+
+
+/*record 醫療紀錄*/
+.record .main .table_all .record_detail{
+    margin: 15px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+.page .main .table_all .table th{
+    white-space: nowrap;
+    background-color: #a3c2d9;
+    color:#000;
+    text-align: center;
+    position: sticky;
+    top: -1px;
+}
+.page .main .table_all .table td{
+    white-space: nowrap;
+}
+.page .main .table_all tbody{
+    background-color: #ffffff;
+}
+.record .main .table_detail .table_td_all .table_t{
+    width: 16%;
+}
+.record .main .table_detail .table_td_all .table_t.item_name{
+    width: 30%;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+}
+.record .main .slick-slider .slick-track, .slick-slider .slick-list{
+    height: 450px;
+}
+
+
+
+/*medicament 口服藥物*/
+.medicament .main .table_detail .right .t_left{
+    width: 10%;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.medicament .main .table_detail .right .t_right{
+    width: 88%;
+    padding: 10px 15px;
+}
+.medicament .main .table_detail .right .t_right .med_content{
+    width: 100%;
+    text-align: center;
+}
+.medicament .main .table_detail .right .t_right .medname_content{
+    width: 100%;
+    text-align: left;
+}
+.medicament .main .table_detail .right .t_right .med_content .med_detail{
+    width: 100%;
+    text-align: left;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    padding: 0px 5px;
+}
+.medicament .main .table_detail .right .t_right .med_content .med_control {
+    width: 25%;
+    text-align: center;
+}
+.medicament .main .table_detail .right .t_right .med_content li{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    align-items: flex-start;
+}
+.medicament .main .table_detail .right .t_right .med_content li:last-child{
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.medicament .main .table_detail .right .t_right .med_detail .flex{
+    justify-content: flex-start;
+}
+.medicament .main .table_detail .right .t_right .med_detail img{
+    object-fit: contain;
+    height: 65px;
+}
+.medicament .main .table_detail .right .t_right .med_detail .med_name{
+    letter-spacing: 1px;
+    font-size: 0.875rem;
+    margin-top: 8px;
+}
+.medicament .main .table_detail .right .t_right .med_photo img{
+    object-fit: contain;
+    height: 80px;
+}
+.medicament #med_photo .modal-body p{
+    margin-bottom: 10px;
+    color:#888888;
+}
+.medicament #med_photo .modal-body img{
+    width: 100%;
+}
+.medicament .med_title{
+ font-weight: bold;
+ margin:  10px 0;
+}
+
+.medicament .time_title{
+    width: 100%;
+    font-weight: bold;
+}
+.medicament .time{
+    margin: 0;
+}
+/*usefulTips醫療小叮嚀*/
+.usefulTips .main .table_detail .table_th_all .t_left,.usefulTips .main .table_detail .table_td_all .t_left{
+    width: 50%;
+    
+}
+.usefulTips .main .table_detail .table_th_all .t_mid,.usefulTips .main .table_detail .table_td_all .t_mid{
+    width: 16%;
+    
+}
+.usefulTips .main .table_detail .table_th_all .t_right,.usefulTips .main .table_detail .table_td_all .t_right{
+    width: 31%;
+    
+}
+/*以下可以刪，模擬我的醫療紀錄圖片*/
+.record .main .table_all .record_detail img{
+    width: 100%;
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+

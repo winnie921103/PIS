@@ -1,0 +1,500 @@
+/*768down*/
+/*
+    480~768
+    320~480  通用 ========================= 手機
+    320down  通用 ========================= 小型手機
+*/
+
+
+/*480~768*/
+@media (max-width: 768px) {
+
+    /*衛教資訊*/
+    .info .main .table_detail {
+        flex-direction: column;
+        font-size: 0.875rem;
+        letter-spacing: 1px;
+    }
+
+    .info .main .table_detail .right {
+        width: 100%;
+        padding: 15px;
+        display: flex;
+    }
+
+    .info .main .table_detail .table_th_all {
+        width: 21%;
+        flex-direction: column;
+        margin-right: 8px;
+    }
+
+    .info .main .table_detail .table_th_all .table_t {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        width: 100%;
+        padding: 0px;
+        min-height: 40px;
+        margin: 5px 0px;
+    }
+
+    .info .main .table_detail .table_td_all {
+        width: calc(100% - 100px);
+        flex-direction: column;
+    }
+
+    .info .main .table_detail .table_td_all .table_t {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0px 15px;
+        margin: 5px;
+        word-break: break-word;
+        white-space: pre-wrap;
+    }
+
+    .info .t_left,
+    .info .t_mid,
+    .info .t_right {
+        width: 100%;
+    }
+
+    /*口服藥物*/
+    .medicament .main .between{
+        flex-wrap: wrap;
+    }
+    .medicament .main .table_detail .table_td_all {
+        width: 100%;
+    }
+
+    .medicament .main .table_detail .right .t_right .med_content .med_detail {
+        width: 100%;
+        text-align: center;
+        font-size: 0.875rem;
+        letter-spacing: 1px;
+        display: flex;
+        padding: 5px 0;
+        align-items: center;
+        border-bottom: 1px dotted #b0b0b0;
+    }
+
+    .medicament .main .table_detail .right .t_right .med_content {
+        width: 100%;
+        text-align: left;
+    }
+
+    .medicament .med_title {
+        font-weight: bold;
+        text-align: left;
+        width: 38%;
+        margin: 0 10px 0 0;
+    }
+
+    .medicament .main .table_detail .right .t_right .med_content li {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 5px solid #a3c2d9;
+    }
+
+    .medicament .page .main .table_detail .right {
+        width: 100%;
+        background-color: #a3c2d9;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .medicament .main .table_detail .right .t_right {
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+    /*醫療小叮嚀*/
+    .usefulTips .main .table_detail .table_td_all .table_t {
+        padding: 10px;
+    }
+
+    .usefulTips .main .table_detail .table_th_all .t_right,
+    .usefulTips .main .table_detail .table_td_all .t_right {
+        width: 49%;
+    }
+
+    .usefulTips .main .table_detail .table_td_all .t_right {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .usefulTips .main .table_detail .table_td_all .t_left {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+/*320~480*/
+/*通用 ========================= 手機*/
+@media only screen and (max-width : 480px) {
+    .main {
+        width: 100%;
+    }
+
+    /*選單*/
+    .nslls .footer .btn_all {
+        width: 49%;
+    }
+
+    /*頁首*/
+    .nslls .header .container {
+        display: flex;
+        font-size: 0.7em;
+        padding: 0;
+    }
+
+    .nslls .header .doctor_all img {
+        display: none;
+    }
+
+    .nslls .subtitle {
+        font-size: 0.75em;
+    }
+
+    .nslls .subtitle .weather {
+        display: none;
+    }
+
+    .nslls .usefulTips_img {
+        width: 31%;
+        height: 2.5em;
+        padding: 0 5px;
+        margin: 10px 0;
+    }
+
+    .nslls .main_content {
+        height: calc(100vh - 150px);
+        margin: 20px auto;
+    }
+     /*醫療行程*/
+     
+     .calendar .main .table_title {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .calendar .main .table_all .table td {
+        font-size: 0.75em;
+        vertical-align: middle;
+        padding: 0.45rem;
+    }
+
+    .calendar .main .table_all .table th {
+        font-size: 0.8em;
+        padding: 0.45rem;
+    }
+
+    .calendar .main .btn {
+        margin: 0;
+        padding: 2px 3px;
+        width: 4em;
+        font-size: 0.5rem;
+        display: flex;
+        justify-content: center;
+    }
+    /*住院須知*/
+    .hospitalization .main .table_title {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .hospitalization .main .table_all .table td {
+        white-space: pre-wrap;
+        font-size: 0.75em;
+        vertical-align: middle;
+        padding: 0.45rem;
+    }
+
+    .hospitalization .main .table_all .table th {
+        white-space: pre-wrap;
+        font-size: 0.8em;
+        padding: 0.45rem;
+    }
+
+    .hospitalization .main .btn {
+        margin: 0;
+        padding: 2px 3px;
+        width: 4em;
+        font-size: 0.5rem;
+        display: flex;
+        justify-content: center;
+    }
+    /*醫療說明書*/
+    .instructions .main .table_title {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .instructions .main .table_all .table td {
+        white-space: pre-wrap;
+        font-size: 0.75em;
+        vertical-align: middle;
+        padding: 0.45rem;
+    }
+
+    .instructions .main .table_all .table th {
+        white-space: pre-wrap;
+        font-size: 0.8em;
+        padding: 0.45rem;
+    }
+    /*醫療團隊*/
+    .team .main .between {
+        flex-wrap: wrap;
+        font-size: 0.8em;
+    }
+
+    .team .main .team_table_detail {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .team .main .team_table_detail .left .t_right {
+        width: calc(100% - 83px);
+    }
+
+    /*滿意度調查*/
+    .questionnaire .score fieldset legend {
+        font-size: 1em;
+    }
+
+    .questionnaire .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .questionnaire .between{
+        display: block;
+    }
+    .questionnaire .main .checkbox {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    .questionnaire .main .control {
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+
+    }
+    
+    /*口服藥物*/
+    .medicament .main .table_title{
+        font-size: 1.2em;
+    }
+    .medicament .flex {
+        display: inline-block;
+    }
+
+    .medicament .main .table_detail .right .t_left {
+        width: 100%;
+        padding: 5px;
+        margin: 0 0 10px 0;
+        display: inline-flex;
+        text-align: center;
+    }
+
+    .medicament .main .time_title {
+        width: 45%;
+        font-weight: bold;
+    }
+
+    /*衛教資訊*/
+    .info .main .table_title{
+        font-size: 1.2em;
+    }
+    .info .main .table_detail .right {
+        width: 100%;
+        padding: 5px;
+        display: flex;
+    }
+
+    .info .main .table_detail .table_th_all {
+        width: 33%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-right: 8px;
+        font-size: 0.9em;
+        white-space: pre-wrap;
+    }
+
+    .info .main .table_detail .table_th_all .table_t {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        width: 100%;
+        padding: 0px;
+        min-height: 40px;
+        margin: 5px 0px;
+       }
+
+    .info .main .table_detail .table_td_all {
+        width: 62%;
+        flex-direction: column;
+        font-size: 0.9em;
+    }
+
+    .info .main .info_btn_all .btn {
+        margin: 0;
+        padding: 2px 3px;
+        width: 10em;
+        height: 2.5em;
+        font-size: 0.7em;
+        display: flex;
+        justify-content: center;
+        margin: 0 5px;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+    .info .main .btn {
+        margin: 0;
+        padding: 2px 3px;
+        width: 10em;
+        height: 2em;
+        font-size: 1em;
+        display: flex;
+        justify-content: center;
+        margin: 0 5px;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+    .info .main .between{
+        display: block;
+    }
+    /*醫療小叮嚀*/
+    .usefulTips .main .table_detail .right {
+        padding: 5px;
+    }
+
+    .usefulTips .main .table_detail .table_td_all .table_t {
+        padding: 5px;
+        font-size: 0.75em;
+    }
+
+    .usefulTips .main .table_detail .table_th_all .table_t {
+        padding: 6px;
+        font-size: 0.75em;
+    }
+
+    .usefulTips .main .table_detail .table_th_all .t_right,
+    .usefulTips .main .table_detail .table_td_all .t_right {
+        width: 49%;
+    }
+
+    .usefulTips .main .table_detail .table_td_all .t_right {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .usefulTips .main .table_detail .table_td_all .t_left {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .usefulTips .main  .btn {
+        margin: 0;
+        padding: 2px 3px;
+        width: 10em;
+        font-size: 0.65em;
+        display: flex;
+        justify-content: center;
+        margin: 0 5px;
+    }
+
+    /*醫療紀錄*/
+    .record .main {
+        width: 72%;
+    }
+
+    .record .main .slick-item {
+        margin: 0 10px 0 0;
+    }
+
+    .record .main .slick-slider .slick-track,
+    .slick-slider .slick-list {
+        height: 400px;
+    }
+}
+
+/*320down*/
+/*小螢幕尺寸*/
+/*通用 ========================= 小型手機*/
+@media only screen and (max-width : 320px){
+    .nslls .subtitle {
+        font-size: 0.15em;
+    }
+      /*選單*/
+      .nslls #hamburger-menu.active{
+        padding-top: 50px;
+    }
+    .nslls #hamburger-menu{
+        padding-top: 50px;
+    }
+    .nslls .footer .btn_all {
+        height: 80px;
+        font-size: 0.9em;
+    }
+    .nslls .footer .btn_all span {
+        top:55px;
+    }
+    .nslls .footer .btn_wrap {
+        justify-content: center;
+    }
+    .nslls .footer .btn_all img {
+        width: 40px;
+        height: 40px;
+        top: 10px;
+       }
+    /*衛教資訊*/
+    .info .main .table_detail .table_th_all,.info .main .table_detail .table_td_all{
+        font-size: 0.8em;
+    }
+    .info .main .table_detail .table_th_all{
+        width: 33%;
+    }
+    .info .main .table_detail .table_td_all {
+        width: 61%;
+    }
+    .info .main .between{
+        display: block;
+    }
+    /*醫療紀錄*/
+    .record .main{
+        width: 72%;
+    }
+    .record .main .slick-item {
+        margin: 0 10px 0 0;
+    }
+    .record .main .slick-slider .slick-track, .slick-slider .slick-list{
+        height: 300px;
+    }
+    /*醫療行程*/
+     
+    .calendar .main .table_title {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .calendar .main .table_all .table td {
+        white-space: pre-wrap;
+        font-size: 0.75em;
+        vertical-align: middle;
+    }
+
+    .calendar .main .table_all .table th {
+        white-space: pre-wrap;
+        font-size: 0.8em;
+    }
+
+    .calendar .main .btn {
+        margin: 0;
+        padding: 2px 3px;
+        width: 4em;
+        font-size: 0.5rem;
+        display: flex;
+        justify-content: center;
+    }
+}
+

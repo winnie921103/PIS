@@ -1,0 +1,40 @@
+/*1024up*/
+/*
+   1024up
+   1024px~1366px 橫式 iPad Pro in landscape
+   1024px~1366px 直式 iPad Pro in portrait
+*/
+
+/*1024up*/
+@media (min-width: 1200px) {
+    .main {
+        width: 75%;
+    }
+}
+
+/*iPad Pro in landscape 橫式*/
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) and (orientation : landscape) {}
+
+/*iPad Pro in portrait 直式*/
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) {
+
+    /*滿意度調查*/
+    .questionnaire .score .group {
+        padding: 6px;
+    }
+
+    /*口服藥物*/
+    .medicament .main .table_detail .right .t_right .med_content .med_detail {
+        width: 41%;
+        text-align: left;
+        font-size: 0.875rem;
+        letter-spacing: 1px;
+        padding: 0px 5px;
+    }
+
+    .medicament .main .table_detail .right .t_right .med_content .med_control {
+        width: 11%;
+        text-align: center;
+    }
+
+}

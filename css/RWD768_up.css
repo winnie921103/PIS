@@ -1,0 +1,108 @@
+/*768~1024*/
+/*
+   991px down
+   768px~1024px 直式 iPad in portrait
+   768px~1024px 橫式 iPad in landscape
+*/
+
+@media (max-width: 991px) {
+    .nslls .main_content {
+        height: calc(100vh - 380px);
+        margin: 20px auto;
+    }
+
+    /*醫療團隊*/
+    .team .main .between {
+        flex-wrap: wrap;
+        font-size: 0.65em;
+    }
+
+    .team .main .team_table_detail {
+        width: 100%;
+        margin: 10px 0;
+        padding: 5px;
+    }
+
+    .team .main .team_table_detail .left .t_left {
+        width: 42%;
+    }
+
+    .team .main .team_table_detail .left .t_right .table_td {
+        padding: 3px 5px;
+    }
+
+    .team .main .team_table_detail .left .t_left .table_th {
+        padding: 2px 5px;
+    }
+
+    .team .main .team_table_detail .right {
+        width: 100%;
+        padding: 0px 5px;
+    }
+
+    .team .main .team_table_detail .left .t_right {
+        width: 100%;
+    }
+
+}
+
+
+/*iPad in portrait 直式*/
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+
+    /*選單*/
+    .nslls .footer .btn_all span {
+        font-size: 0.8em;
+    }
+
+    /*頁首*/
+    .nslls .usefulTips_img {
+        width: 20%;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    /*醫療團隊*/
+    .team .main .between {
+        flex-wrap: wrap;
+    }
+
+    .team .main .team_table_detail {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /*醫療紀錄*/
+    .record .main {
+        width: 85%;
+    }
+
+    .record .main .slick-item {
+        margin: 0 0 0 10px;
+    }
+    /*滿意度調查*/
+    .questionnaire .main .between {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+    .questionnaire .main .title{
+        width: 100%;
+    }
+
+}
+
+/*iPad in landscape 橫式*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+
+    /*醫療團隊*/
+    .team .main .between {
+        flex-wrap: nowrap;
+    }
+
+    .team .main .team_table_detail {
+        width: 100%;
+        margin: 10px;
+    }
+}
